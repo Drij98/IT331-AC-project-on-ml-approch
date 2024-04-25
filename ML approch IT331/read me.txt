@@ -1,0 +1,41 @@
+# IT 331
+# Project by Drij gajera and alice moradiya
+# We devided all of our wirk evenly 
+# Drij - I did the findings of machile lerning approches and used 4 of them in the implementation of th code and trained the model
+# Alice - I did the the lexical feture part from finding ,using, implementing  and train them it is mine part
+
+# we both worked on the suggetion that you gave us on the presantyation day and we added 13 more features to the lexicasl features 
+# and we got an improved accuracy_score then before
+
+# use the atteched file check the name of the file should be same
+
+url_df = pd.read_csv('Malicious URLs.csv')
+url_df.tail(50)
+
+# import all the required moduls
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+import re
+
+%matplotlib inline
+
+# Import Scikit-learn helper functions
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+
+# Import Scikit-learn models
+#scikit-learn is a free software machine learning library for the Python programming language
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import re
+
+# Import Scikit-learn metric functions
+from sklearn.metrics import confusion_matrix, classification_report
+import seaborn as sns
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
